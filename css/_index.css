@@ -1,0 +1,101 @@
+
+.main {
+	background-color: black;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.title {
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 55px;
+	font-family: raleway, sans-serif;
+	font-weight: bold;
+	line-height: 1.2em;
+	word-wrap: break-word;
+}
+
+.subtitle {
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-family: raleway, sans-serif;
+	line-height: 1.4em;
+	word-wrap: break-word;
+	font-weight: normal;
+	font-style: normal;
+	vertical-align: baseline;
+}
+
+.waitlist {
+	background-color: rgba(133, 77, 255, 1);
+	border-top-color: transparent;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: transparent;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: transparent;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+
+	cursor: pointer !important;
+	display: flex;
+	align-items: center;
+	text-align: initial;
+	justify-content: center;
+	border-radius: 50px;
+	font-size: 10px;
+	font-family: Arial,Helvetica,sans-serif;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+
+	transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+
+	justify-content: center;
+}
+
+.about {
+
+}
+
+.about-item {
+
+}
+
+.about-header {
+
+}
+
+.about-text {
+
+}
+
+.how-it-works {
+
+}
+
+.how-it-works-header {
+
+}
+
+.how-it-works-item {
+
+}
+
+.how-it-works-text {
+
+}
+
+.footer {
+
+}
