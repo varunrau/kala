@@ -14,6 +14,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
+	<script src="js/main.js"></script>
 
 	<style type="text/css">
 		a.kala_link {
@@ -69,7 +70,7 @@
 		</a>
 		<div class="padding_sides40 padding_top60 padding_bottom60 inner">
 			<div>
-				<a href="mailto:help+kala@humans.fut.io" class="font18 link white bottom15">Contact</a>
+				<a href="mailto:superduperguper@gmail.com" class="font18 link white bottom15">Contact</a>
 			</div>
 		</div>
 	</div>
@@ -85,11 +86,11 @@
 				<div class="row line_height40">
 					<div class="col-lg-8 col-md-7 block_left">
 						<div class="right20 inline_block nav_logo">
-							<img src="/i/kala-logo.png" width="150px" />
+							<h1 class="font36 semibold">Kala</h1>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-5 text_right block_right">
-						<a href="mailto:help+kala@humans.fut.io" class="dark_orange sides20">Contact</a>
+						<a href="mailto:superduperguper@gmail.com" class="dark_orange sides20">Contact</a>
 					</div>
 				</div>
 			</div>
@@ -107,7 +108,7 @@
 						<h4 class="modal-title">Request Access</h4>
 						<p class="modal-title">See that orange circle in the lower-right? Click it and let us know you're interested! You can also send us an email
 							at
-							<a href="mailto:humans+kala@help.fut.io">humans+kala@help.fut.io</a>.</p>
+							<a href="mailto:superduperguper@gmail.com">humans+kala@help.fut.io</a>.</p>
 					</div>
 				</div>
 			</div>
@@ -152,9 +153,16 @@
 						<a href="https://www.google.com">Terms of Service</a>
 					</div>
 			</div>
+			<div class="notifications left700 top250 right_block visible-lg">
+				<div class="notification">
+					A service disruption has been detected.
+				</div>
+			</div>
+			<!--- hero
 			<div class="left700 top250 right_block">
 				<img src="i/hero_grafana.png" class="img-responsive visible-lg" width="500px">
 			</div>
+			--->
 			</div>
 
 		</div>
@@ -283,7 +291,7 @@
 			<div class="top20 bottom70 hr height1 light_gray"></div>
 			<div class="row">
 				<div class="col-md-3 bottom50">
-					<img src="/i/kala-logo.png" width="150px" />
+					<h1 class="font36 semibold">Kala</h1>
 				</div>
 				<div class="col-md-3 bottom50">
 				</div>
@@ -295,83 +303,6 @@
 	<script src="js/script.js"></script>
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-	<script type="text/javascript">
-		$(function () {
-
-
-			/**
-			 * Handle form submission
-			 */
-			$('.email-form').on("submit", function (e) {
-
-				e.preventDefault();
-				var formData = $(this).serializeArray();
-
-				if (!formData) handleError("no data received");
-				NProgress.start();
-
-				$.ajax({
-					type: 'POST',
-					url: '/subscribe',
-					data: JSON.stringify(formData),
-					contentType: 'application/json; charset=utf-8',
-					success: handleSuccess,
-					error: handleError
-				});
-
-				function handleSuccess() {
-					NProgress.done();
-					$('#thank-you').modal();
-				}
-
-				function handleError(error) {
-					NProgress.done();
-					console.log(error);
-					alert('Sorry, kala couldn\'t add you from here! Can you send an email to help+kala@humans.fut.io instead?');
-				}
-			});
-
-
-			window.addEventListener('load', function () {
-				var videos = $('.kala-vid');
-				var checkCount = 0; // tmp: Mobile browsers refused to load the vids. Just keep the posters instead.
-
-				function checkLoad() {
-					checkCount++;
-					for (var i = 0; i < videos.length; i++) {
-						var video = videos[i];
-						if (video.readyState === 4) {
-							video.removeAttribute('poster');
-						} else if (checkCount > 5) {
-							console.log('Videos not loading. Falling back to images.');
-						} else {
-							setTimeout(checkLoad, 1000);
-						}
-					}
-				}
-				checkLoad();
-			}, false);
-
-			/**
-			 * Handle video play
-			 */
-
-			$('.kala-vid').click(function (e) {
-				var vid = this;
-				// vid.controls = true;
-				vid.play();
-				this.onended = function () {
-					vid.currentTime = 0;
-					// vid.controls = false;
-				}
-			})
-
-			window.sr = ScrollReveal();
-			sr.reveal('.medium_gray');
-
-		})
-	</script>
-
 </body>
 
 </html>

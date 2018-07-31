@@ -71,6 +71,11 @@ b {
 .container {
   position: relative; }
 
+.notifications {
+  overflow-y: hidden;
+  max-height: 60vh;
+}
+
 /* Header 1 */
 .header_1 {
   padding-bottom: 113px;
