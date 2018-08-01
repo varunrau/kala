@@ -72,9 +72,43 @@ b {
   position: relative; }
 
 .notifications {
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
   max-height: 60vh;
 }
+
+
+.notification {
+  animation: 1.5s slidein forwards ease-in-out;
+  background: white;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-left: 300px;
+  opacity: 0;
+  transition: 1s;
+  height: 70px;
+  width: 100%;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: 300px;
+    opacity: 0;
+  }
+
+  70% {
+    margin-left: 0;
+    opacity: 1.0;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1.0;
+  }
+}
+
 
 /* Header 1 */
 .header_1 {
