@@ -11,7 +11,7 @@ $(document).ready(function() {
 			img: "hi",
 		},
 		{
-			text: "Incident mitigated.",
+			text: "Service health restored.",
             subtext: "Incident was mitigated at 11:12 AM. Service was unhealthy for 24 minutes.",
 			img: "hi",
 		},
@@ -32,14 +32,14 @@ $(document).ready(function() {
 		},
 	];
 	var i = 0;
-	window.setInterval(function() {
+	var addNotification = function() {
 		if (i >= notifications.length) {
 			i = 0;
 		}
 
 		const notification = notifications[i];
 		$(".notifications").animate({
-            marginTop: '+=90px',
+            "marginTop": '+=110px',
         }, 500, function() {
             $(".notifications").prepend($(`
             <div class='notification'>
@@ -51,10 +51,12 @@ $(document).ready(function() {
                 </div>
             </div>`));
 
-            $(".notifications").css("marginTop", "-=90px");
+            $(".notifications").css("marginTop", "-=110px");
         })
 
 		i++;
-	}, 3000);
+	};
+	addNotification();
+	window.setInterval(addNotification, 5000);
 });
 
