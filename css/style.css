@@ -72,8 +72,10 @@ b {
   position: relative; }
 
 .notifications {
-  /*overflow-y: hidden;*/
+  overflow-y: hidden;
   max-height: 60vh;
+  padding: 10px;
+  overflow-x: visible;
 }
 
 
@@ -107,6 +109,14 @@ b {
     margin-left: 0;
     opacity: 1.0;
   }
+}
+
+.notification-title {
+  font-family: Open Sans;
+}
+
+.notification-subtitle {
+  font-family: Open Sans;
 }
 
 

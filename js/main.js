@@ -1,13 +1,33 @@
 $(document).ready(function() {
 	const notifications = [
 		{
-			text: "hi",
-            subtext: "o",
+			text: "Android users are unable to signup through Facebook.",
+            subtext: "Service disruption detected at 10:48 AM.",
+			img: "i/alert.svg",
+		},
+		{
+			text: "Oncall engineer has acknowledged incident.",
+            subtext: "",
 			img: "hi",
 		},
 		{
-			text: "hello",
-            subtext: ";o",
+			text: "Incident mitigated.",
+            subtext: "Incident was mitigated at 11:12 AM. Service was unhealthy for 24 minutes.",
+			img: "hi",
+		},
+		{
+			text: "Web service latency has spiked for users in India.",
+            subtext: "Service degradation detected at 3:35 AM.",
+			img: "i/alert.svg",
+		},
+		{
+			text: "Oncall engineer has acknowledged incident.",
+            subtext: "",
+			img: "hi",
+		},
+		{
+			text: "Incident mitigated.",
+            subtext: "Incident was mitigated at 5:03 AM. Service was unhealthy for 1 hour and 28 minutes.",
 			img: "hi",
 		},
 	];
@@ -23,7 +43,12 @@ $(document).ready(function() {
         }, 500, function() {
             $(".notifications").prepend($(`
             <div class='notification'>
-                ${notification.text}
+            	<div class='notification-title'>
+                	${notification.text}
+                </div>
+                <div class='notification-subtitle'>
+                	${notification.subtext}
+                </div>
             </div>`));
 
             $(".notifications").css("marginTop", "-=90px");
