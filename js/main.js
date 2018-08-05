@@ -12,7 +12,7 @@ $(document).ready(function() {
 		},
 		{
 			text: "Service health restored.",
-            subtext: "Incident was mitigated at 11:12 AM. Service was unhealthy for 24 minutes.",
+            subtext: "Service was unhealthy for 24 minutes.",
 			img: "hi",
 		},
 		{
@@ -27,7 +27,7 @@ $(document).ready(function() {
 		},
 		{
 			text: "Incident mitigated.",
-            subtext: "Incident was mitigated at 5:03 AM. Service was unhealthy for 1 hour and 28 minutes.",
+            subtext: "Service was unhealthy for 1 hour and 28 minutes.",
 			img: "hi",
 		},
 	];
@@ -43,12 +43,15 @@ $(document).ready(function() {
         }, 500, function() {
             $(".notifications").prepend($(`
             <div class='notification'>
-            	<div class='notification-title'>
-                	${notification.text}
-                </div>
-                <div class='notification-subtitle'>
-                	${notification.subtext}
-                </div>
+            	<img class='notification-img' src=${notification.img} />
+            	<div class='notification-info-wrapper'>
+	            	<div class='notification-title'>
+	                	${notification.text}
+	                </div>
+	                <div class='notification-subtitle'>
+	                	${notification.subtext}
+	                </div>
+            	</div>
             </div>`));
 
             $(".notifications").css("marginTop", "-=110px");
